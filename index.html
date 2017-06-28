@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+            			<title> FOSS4G NL </title>
+            <link rel="stylesheet" href="main.css"/>
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
+            
+		</head>
+	<body>
+        
+		<H1>Eigen huis en tuin</H1>
+
+        <div id="map"></div>
+        
+        <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+
+        <script>
+	//initialize the map         
+	var map = L.map('map').setView([52.74328095, 6.89656019], 12);
+	
+	//Create baselayer - tiles         
+	var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+		mattribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+		maxZoom: 12
+		}
+	);
+            
+    var huis = L.marker([ 52.74389148,6.89954817]).addTo(map);
+
+    var moestuin = L.marker([52.74341085, 6.89617932]).addTo(map);
+
+    var popup = "Hier is ons huis";
+            huis.bindPopup(popup); 
+            
+    var popup = "Hier is onze moestuin";
+            moestuin.bindPopup(popup); 
+            
+	backgroundMap.addTo(map);
+</script>
+        
+        
+	   </body>
+</html>
+
+
