@@ -16,15 +16,18 @@
 
         <script>
 	//initialize the map         
-	var map = L.map('map').setView([52.74328095, 6.89656019], 15);
+	//var map = L.map('map').setView([52.74328095, 6.89656019], 12);
 
 	//homewardboundingbox         
-	var map = L.map('map').fitBounds([
-    		[52.74389148,6.89954817],
-    		[52.6960373,6.8488974]
-		]);
-		
-		
+//	var map = L.map('map').fitBounds([
+//    		[52.74389148,6.89954817],
+//    		[52.6960373,6.8488974]
+//		]);
+	
+	//homewardboundingbox         
+	var map = L.map('map').fitBounds(markers.getBounds().pad(0.5))
+	
+	
 	//Create baselayer - tiles         
 //	var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
 	//	mattribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
