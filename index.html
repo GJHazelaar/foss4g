@@ -29,15 +29,20 @@
 		}
 	);
             
-    var huis = L.marker([ 52.74389148,6.89954817]).addTo(map);
+    var huis = L.marker([52.74389148,6.89954817]).addTo(map);
 
     var moestuin = L.marker([52.74341085, 6.89617932]).addTo(map);
 
+    var buitenland = L.marker([52.6960373,6.8488974]).addTo(map);		
+		
     var popup = "Hier is ons huis";
             huis.bindPopup(popup); 
             
     var popup = "Hier is onze moestuin";
-            moestuin.bindPopup(popup); 
+            moestuin.bindPopup(popup);
+
+    var popup = "Hier is Camping Buitenland";
+            buitenland.bindPopup(popup); 
             
 	backgroundMap.addTo(map);
 </script>
